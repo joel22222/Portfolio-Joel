@@ -464,12 +464,21 @@ export default function AAIPortfolio() {
             program to deepen my expertise and contribute to the next generation of AI applications.
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-12">
+                    <div className="flex flex-wrap gap-3 mb-12">
             <a
               href="#projects"
               className="bg-slate-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition"
             >
               View My Work
+            </a>
+            <a 
+              href="https://3d-portfolio-joel.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition flex items-center gap-2"
+            >
+              <Sparkles size={18} />
+              3D Portfolio
             </a>
             <a 
               href="#contact"
