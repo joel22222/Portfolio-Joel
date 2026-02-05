@@ -647,7 +647,7 @@ export default function AAIPortfolio() {
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <a
-                href="mailto:megacertgt@gmail.com"
+                href="mailto:contactjoeltan@gmail.com"
                 className="flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-medium hover:bg-slate-100 transition"
               >
                 <Mail size={18} />
@@ -659,6 +659,13 @@ export default function AAIPortfolio() {
               >
                 <Linkedin size={18} />
                 LinkedIn
+              </a>
+              <a
+                href="https://github.com/joel22222"
+                className="flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-700 transition"
+              >
+                <Github size={18} />
+                GitHub
               </a>
             </div>
           </div>
