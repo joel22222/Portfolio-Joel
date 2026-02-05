@@ -460,7 +460,7 @@ export default function AAIPortfolio() {
           
           <p className="text-base text-gray-600 mb-10 leading-relaxed">
             I'm passionate about using AI to solve real-world problems. My work focuses on creating systems 
-            that are not just technically sound, but genuinely useful. Currently applying to SIT's Applied AI 
+            that are not just technically sound, but genuinely useful. Currently applying to SIT
             program to deepen my expertise and contribute to the next generation of AI applications.
           </p>
 
@@ -599,35 +599,35 @@ export default function AAIPortfolio() {
   <div className="max-w-6xl mx-auto px-6 lg:px-8">
     <div className="max-w-3xl">
       <h2 className="text-3xl font-bold text-gray-900 mb-6">
-        Why SIT Applied AI?
+        Why SIT?
       </h2>
       <div className="space-y-4 text-gray-700 leading-relaxed">
         <p>
-          My journey to Applied AI has been shaped by diverse experiences that taught me discipline, 
+          My journey in AI has been shaped by diverse experiences that taught me discipline, 
           innovation, and the importance of real world impact. As a member of the Temasek Polytechnic 
           Tennis Team (2024/25 2025/26), I helped my team earn a Silver medal at the Tennis POL ITE 
           tournament. More notably, in 2025/26, the TP men's tennis team achieved their first gold medal 
           in 15 years a historic milestone that demonstrated what dedication and teamwork can accomplish. 
           These experiences on the court taught me discipline, teamwork, and perseverance, qualities that 
-          translate directly to solving complex technical challenges in AI development.
+          translate directly to solving complex technical challenges.
         </p>
         <p>
-          SIT's Applied AI program stands out to me because it emphasizes practical, industry integrated 
+          SIT stands out to me because it emphasizes practical, industry integrated 
           learning. The curriculum's focus on real world projects, industry partnerships, and applied research 
           aligns perfectly with my hands on approach to learning. I'm drawn to SIT's Integrated Work Study 
-          Programme, which will allow me to apply AI concepts in actual business environments and contribute 
-          to real solutions.
+          Programme, which will allow me to gain real-world experience in actual business environments and contribute 
+          to meaningful solutions.
         </p>
         <p>
           My portfolio demonstrates that I don't just build projects for academic credit I create systems 
           designed for real deployment, validated by actual stakeholders like the SAFRA Tampines Club Manager. 
           I want to continue this trajectory at SIT, collaborating with faculty and industry partners to develop 
-          AI solutions that address genuine business challenges. Whether it's improving healthcare diagnostics, 
-          enhancing manufacturing efficiency, or creating more accessible technology, I'm committed to using AI 
+          solutions that address genuine business challenges. Whether it's improving healthcare diagnostics, 
+          enhancing manufacturing efficiency, or creating more accessible technology, I'm committed to using my skills 
           as a force for positive change.
         </p>
         <p>
-          SIT's Applied AI program represents the next step in my journey a place where my technical skills, 
+          SIT represents the next step in my journey a place where my technical skills, 
           competitive drive, and commitment to meaningful innovation can converge to create real impact.
         </p>
       </div>
@@ -642,7 +642,7 @@ export default function AAIPortfolio() {
           <div className="bg-slate-900 rounded-2xl p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Let's Connect</h2>
             <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-              Interested in discussing AI projects or potential collaborations? 
+              Interested in discussing more? 
               I'd love to hear from you.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
