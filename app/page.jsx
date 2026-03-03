@@ -16,7 +16,7 @@ export default function AAIPortfolio() {
       tags: ['Isolation Forest', 'PCA', 'Autoencoder', 'Predictive Maintenance'],
       image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop',
       shortDesc: 'Unsupervised anomaly detection pipeline for monitoring industrial equipment using multivariate sensor data',
-      problem: 'Industrial plants use many sensors (vibration, temperature, pressure, flow, RPM) to monitor critical rotating equipment. Manual inspection of multivariate sensor feeds is infeasible at scale and real failure labels are rare. The core challenge is detecting unusual patterns and early signs of equipment degradation from streaming sensor data without reliable labeled faults, while balancing false positives and false negatives across noisy, heterogeneous sensor channels.',
+      problem: 'Industrial plants use many sensors (vibration, temperature, pressure, flow, RPM) to monitor critical rotating equipment. Manual inspection of multivariate sensor feeds is infeasible at scale and real failure labels are rare. The core challenge is detecting unusual patterns and early signs of equipment degradation from streaming sensor data without reliable labeled faults, while balancing false positives and false negatives across noisy sensor channels.',
       solution: 'Built an unsupervised anomaly-detection pipeline comparing five model families (Isolation Forest, DBSCAN, Autoencoder, One-Class SVM, LOF). Evaluated three scalers (StandardScaler, MinMaxScaler, RobustScaler) to address distributional assumptions and extreme outliers. Used PCA projections to visualize separation between normal and anomalous points. After systematic hyperparameter tuning, selected Fine-Tuned Isolation Forest with RobustScaler for clearest separation and most reliable anomaly signals.',
       implementation: [
         'Ingested time-series sensor data and one-hot encoded categorical features (equipment type, location)',
@@ -195,7 +195,8 @@ export default function AAIPortfolio() {
       ],
       technical: 'Analysis framework covering AI ethics principles, dataset bias mechanisms (underrepresentation, imbalanced categories, lack of diversity), black box problem in deep learning CNNs, AI explainability tools (SHAP - SHapley Additive Explanations), error handling and model auditing (pre-deployment testing, continuous dataset reviews, human-in-the-loop validation). Technical concepts: facial recognition systems, convolutional neural networks, image classification, bias detection and mitigation strategies.',
       challenges: 'Racial and ethnic misidentification rooted in biased datasets with lack of demographic diversity. Cultural sensitivity issues - developers lacked awareness of historical racism with no internal cultural review process. Lack of accountability across multiple departments with no single responsibility point and no regulatory frameworks to enforce consequences. Lack of transparency in AI decision-making processes with limited documentation and no public explanation from Google initially. Weak error handling with no safety filters, no mechanism to block offensive labels, and AI deployed too early without sufficient testing.',
-      report: '/JOELAIETCERT.pdf',
+      report: 'https://docs.google.com/document/d/1WWTVatPPRt0iBYgbpVn7PwzVDEeZej_D/edit',
+      certificate: '/JOEL%20AIET%20CERT.pdf',
       year: '2024'
     },
     {
@@ -389,6 +390,17 @@ export default function AAIPortfolio() {
                   Full Report
                 </a>
               )}
+              {project.certificate && (
+                <a
+                  href={project.certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-50 transition"
+                >
+                  <ExternalLink size={18} />
+                  Certificate
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -475,7 +487,7 @@ export default function AAIPortfolio() {
               href="https://3d-portfolio-joel.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition flex items-center gap-2"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition flex items-center gap-2"
             >
               <Sparkles size={18} />
               3D Portfolio
@@ -580,7 +592,33 @@ export default function AAIPortfolio() {
                           className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-3 py-1.5 rounded-md text-sm font-medium hover:bg-blue-50 transition"
                         >
                           <ExternalLink size={14} />
+                          Full Report
+                        </a>
+                      )}
+
+                      {project.certificate && (
+                        <a
+                          href={project.certificate}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-3 py-1.5 rounded-md text-sm font-medium hover:bg-blue-50 transition"
+                        >
+                          <ExternalLink size={14} />
                           Certificate
+                        </a>
+                      )}
+
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="flex items-center gap-2 border-2 border-slate-300 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium hover:bg-slate-50 transition"
+                        >
+                          <ExternalLink size={14} />
+                          Demo
                         </a>
                       )}
                     </div>
