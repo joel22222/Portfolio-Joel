@@ -195,8 +195,8 @@ export default function AAIPortfolio() {
       ],
       technical: 'Analysis framework covering AI ethics principles, dataset bias mechanisms (underrepresentation, imbalanced categories, lack of diversity), black box problem in deep learning CNNs, AI explainability tools (SHAP - SHapley Additive Explanations), error handling and model auditing (pre-deployment testing, continuous dataset reviews, human-in-the-loop validation). Technical concepts: facial recognition systems, convolutional neural networks, image classification, bias detection and mitigation strategies.',
       challenges: 'Racial and ethnic misidentification rooted in biased datasets with lack of demographic diversity. Cultural sensitivity issues - developers lacked awareness of historical racism with no internal cultural review process. Lack of accountability across multiple departments with no single responsibility point and no regulatory frameworks to enforce consequences. Lack of transparency in AI decision-making processes with limited documentation and no public explanation from Google initially. Weak error handling with no safety filters, no mechanism to block offensive labels, and AI deployed too early without sufficient testing.',
-      report: 'https://docs.google.com/document/d/1WWTVatPPRt0iBYgbpVn7PwzVDEeZej_D/edit',
-      certificate: '/JOEL%20AIET%20CERT.pdf',
+      report: '/AIET_PROJ_JOEL.pdf',
+      certificate: '/JOELAIETCERT.pdf',
       year: '2024'
     },
     {
