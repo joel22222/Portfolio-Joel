@@ -7,7 +7,6 @@ export default function AAIPortfolio() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // EDIT YOUR PROJECTS HERE
   const projects = [
     {
       id: 1,
@@ -123,7 +122,7 @@ export default function AAIPortfolio() {
         'Designed UI with floating chat button, on-screen keyboard for noisy environments, map/directions button, built with React + TailwindCSS',
         'Debugged integration issues (CORS, port mismatches) using Postman, consolidated onto single machine, conducted user tests with classmates and staff'
       ],
-      realworld: 'Developed and deployed for Temasek Culinary Academy\'s Top Table Restaurant to serve as an intelligent virtual concierge for diners. The 3D avatar chatbot handles customer inquiries about menu items, dietary restrictions, allergen information, reservation details, operating hours, and facility directions. Guests can interact naturally through voice or keyboard, receiving instant responses about ingredient details, dish recommendations, and restaurant information without requiring staff intervention. The system is currently operational at the restaurant, providing 24/7 customer assistance and significantly reducing staff workload during peak dining hours while enhancing the overall dining experience.',
+      realworld: "Developed and deployed for Temasek Culinary Academy's Top Table Restaurant to serve as an intelligent virtual concierge for diners. The 3D avatar chatbot handles customer inquiries about menu items, dietary restrictions, allergen information, reservation details, operating hours, and facility directions. Guests can interact naturally through voice or keyboard, receiving instant responses about ingredient details, dish recommendations, and restaurant information without requiring staff intervention. The system is currently operational at the restaurant, providing 24/7 customer assistance and significantly reducing staff workload during peak dining hours while enhancing the overall dining experience.",
       results: [
         'Fully functional 3D interactive chatbot with natural speech and animated responses including head movement, talking animation, and idle loops',
         'Smooth multi-modal interaction supporting both voice and keyboard input',
@@ -264,7 +263,7 @@ export default function AAIPortfolio() {
   const skills = [
     { category: 'Machine Learning', items: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'XGBoost'] },
     { category: 'Deep Learning', items: ['CNN', 'Transformers', 'GANs'] },
-    { category: 'NLP & LLMs', items: [ 'GPT', 'LangChain', 'RAG'] },
+    { category: 'NLP & LLMs', items: ['GPT', 'LangChain', 'RAG'] },
     { category: 'Computer Vision', items: ['OpenCV', 'Object Detection'] },
     { category: 'MLOps', items: ['Docker', 'MLflow', 'CI/CD'] },
     { category: 'Languages', items: ['Python', 'SQL', 'JavaScript', 'C++'] }
@@ -277,27 +276,18 @@ export default function AAIPortfolio() {
           <div className="relative h-72 overflow-hidden rounded-t-xl">
             <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 bg-white/10 backdrop-blur-md p-2 rounded-full hover:bg-white/20 transition"
-            >
+            <button onClick={onClose} className="absolute top-4 right-4 bg-white/10 backdrop-blur-md p-2 rounded-full hover:bg-white/20 transition">
               <X className="text-white" size={20} />
             </button>
             <div className="absolute bottom-6 left-6 right-6">
               <div className="flex items-center gap-2 mb-2">
-                <span className="bg-slate-900/80 backdrop-blur-sm px-3 py-1 rounded-md text-white text-sm font-medium">
-                  {project.category}
-                </span>
-                <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-md text-white text-sm">
-                  {project.year}
-                </span>
+                <span className="bg-slate-900/80 backdrop-blur-sm px-3 py-1 rounded-md text-white text-sm font-medium">{project.category}</span>
+                <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-md text-white text-sm">{project.year}</span>
               </div>
               <h2 className="text-3xl font-bold text-white mb-2">{project.title}</h2>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, idx) => (
-                  <span key={idx} className="bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-white text-xs">
-                    {tag}
-                  </span>
+                  <span key={idx} className="bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-white text-xs">{tag}</span>
                 ))}
               </div>
             </div>
@@ -308,12 +298,10 @@ export default function AAIPortfolio() {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Problem Statement</h3>
               <p className="text-gray-700 leading-relaxed">{project.problem}</p>
             </div>
-
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Solution Overview</h3>
               <p className="text-gray-700 leading-relaxed">{project.solution}</p>
             </div>
-
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Implementation Details</h3>
               <ul className="space-y-2">
@@ -325,7 +313,6 @@ export default function AAIPortfolio() {
                 ))}
               </ul>
             </div>
-
             {project.realworld && (
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-World Application</h3>
@@ -334,7 +321,6 @@ export default function AAIPortfolio() {
                 </div>
               </div>
             )}
-
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Key Results & Impact</h3>
               <div className="space-y-2">
@@ -345,60 +331,37 @@ export default function AAIPortfolio() {
                 ))}
               </div>
             </div>
-
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Technical Stack</h3>
               <p className="text-gray-700 leading-relaxed text-sm">{project.technical}</p>
             </div>
-
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Challenges & Solutions</h3>
               <p className="text-gray-700 leading-relaxed text-sm">{project.challenges}</p>
             </div>
-
             <div className="flex gap-3 pt-4">
               {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-800 transition"
-                >
-                  <Github size={18} />
-                  View Code
+                <a href={project.github} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-800 transition">
+                  <Github size={18} /> View Code
                 </a>
               )}
               {project.demo && (
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 border-2 border-slate-300 text-slate-700 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50 transition"
-                >
-                  <ExternalLink size={18} />
-                  Live Demo
+                <a href={project.demo} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 border-2 border-slate-300 text-slate-700 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50 transition">
+                  <ExternalLink size={18} /> Live Demo
                 </a>
               )}
               {project.report && (
-                <a
-                  href={project.report}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-50 transition"
-                >
-                  <ExternalLink size={18} />
-                  Full Report
+                <a href={project.report} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-50 transition">
+                  <ExternalLink size={18} /> Full Report
                 </a>
               )}
               {project.certificate && (
-                <a
-                  href={project.certificate}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-50 transition"
-                >
-                  <ExternalLink size={18} />
-                  Certificate
+                <a href={project.certificate} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-50 transition">
+                  <ExternalLink size={18} /> Certificate
                 </a>
               )}
             </div>
@@ -422,27 +385,16 @@ export default function AAIPortfolio() {
               </div>
               <span className="font-semibold text-gray-900">Joel Tan</span>
             </div>
-            
             <div className="hidden md:flex items-center gap-8">
               <a href="#projects" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition">Projects</a>
               <a href="#skills" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition">Skills</a>
               <a href="#about" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition">About</a>
-              <a
-                href="#contact"
-                className="bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-800 transition"
-              >
-                Contact
-              </a>
+              <a href="#contact" className="bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-800 transition">Contact</a>
             </div>
-
-            <button 
-              className="md:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
+            <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-
           {mobileMenuOpen && (
             <div className="md:hidden py-4 space-y-3 border-t border-gray-200">
               <a href="#projects" className="block text-gray-600 hover:text-gray-900 text-sm font-medium">Projects</a>
@@ -461,43 +413,46 @@ export default function AAIPortfolio() {
             <Sparkles size={16} />
             <span>Available for collaboration</span>
           </div>
-          
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
-            Joel Tan
-          </h1>
-          
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">Joel Tan</h1>
           <p className="text-xl text-gray-600 mb-8">
             Aspiring AI/ML Engineer building practical solutions in machine learning, NLP, and computer vision.
           </p>
-          
           <p className="text-base text-gray-600 mb-10 leading-relaxed">
-            I'm passionate about using AI to solve real-world problems. My work focuses on creating systems 
+            I'm passionate about using AI to solve real-world problems. My work focuses on creating systems
             that are not just technically sound, but genuinely useful. Currently applying to SIT
             program to deepen my expertise and contribute to the next generation of AI applications.
           </p>
 
-                    <div className="flex flex-wrap gap-3 mb-12">
-            <a
-              href="#projects"
-              className="bg-slate-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition"
-            >
+          {/* Row 1: Main buttons */}
+          <div className="flex flex-wrap gap-3 mb-4">
+            <a href="#projects" className="bg-slate-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition">
               View My Work
             </a>
-            <a 
-              href="https://3d-portfolio-joel.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition flex items-center gap-2"
-            >
+            <a href="https://3d-portfolio-joel.vercel.app/" target="_blank" rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition flex items-center gap-2">
               <Sparkles size={18} />
               3D Portfolio
             </a>
-            <a 
-              href="#contact"
-              className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:border-gray-400 hover:bg-gray-50 transition"
-            >
+            <a href="#contact"
+              className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:border-gray-400 hover:bg-gray-50 transition">
               Get in Touch
             </a>
+          </div>
+
+          {/* Row 2: SIT Open House Demo */}
+          <div className="mb-12">
+            <a
+              href="https://si-tdemo-djbx.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:border-gray-400 hover:bg-gray-50 transition"
+            >
+              <Code size={18} />
+              SIT Open House Demo
+            </a>
+            <p className="text-sm text-gray-500 mt-2">
+              Based on a tutorial found online — customised and adapted to highlight SIT's programmes and offerings.
+            </p>
           </div>
 
           <div className="flex flex-wrap gap-6 text-sm text-gray-500">
@@ -523,106 +478,61 @@ export default function AAIPortfolio() {
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-3">Featured Projects</h2>
             <p className="text-gray-600 max-w-2xl">
-              A collection of my AI/ML work, from anomaly detection to conversational AI. 
+              A collection of my AI/ML work, from anomaly detection to conversational AI.
               Click on any project to see the full technical details.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project) => (
-              <div
-                key={project.id}
-                onClick={() => setSelectedProject(project)}
-                className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer group border border-gray-200"
-              >
+              <div key={project.id} onClick={() => setSelectedProject(project)}
+                className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer group border border-gray-200">
                 <div className="relative overflow-hidden h-48">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                  />
+                  <img src={project.image} alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute top-3 left-3 flex gap-2">
-                    <span className="bg-slate-900/80 backdrop-blur-sm px-2.5 py-1 rounded-md text-white text-xs font-medium">
-                      {project.category}
-                    </span>
-                    <span className="bg-white/90 px-2.5 py-1 rounded-md text-gray-900 text-xs font-medium">
-                      {project.year}
-                    </span>
+                    <span className="bg-slate-900/80 backdrop-blur-sm px-2.5 py-1 rounded-md text-white text-xs font-medium">{project.category}</span>
+                    <span className="bg-white/90 px-2.5 py-1 rounded-md text-gray-900 text-xs font-medium">{project.year}</span>
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-slate-700 transition">
-                    {project.title}
-                  </h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-slate-700 transition">{project.title}</h3>
                   <p className="text-gray-600 text-sm mb-3 line-clamp-2">{project.shortDesc}</p>
                   <div className="flex flex-wrap gap-1.5 mb-3">
                     {project.tags.slice(0, 3).map((tag, idx) => (
-                      <span key={idx} className="bg-slate-100 px-2 py-1 rounded text-xs text-gray-700">
-                        {tag}
-                      </span>
+                      <span key={idx} className="bg-slate-100 px-2 py-1 rounded text-xs text-gray-700">{tag}</span>
                     ))}
                     {project.tags.length > 3 && (
-                      <span className="bg-slate-100 px-2 py-1 rounded text-xs text-gray-700">
-                        +{project.tags.length - 3}
-                      </span>
+                      <span className="bg-slate-100 px-2 py-1 rounded text-xs text-gray-700">+{project.tags.length - 3}</span>
                     )}
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="flex items-center gap-2 bg-slate-900 text-white px-3 py-1.5 rounded-md text-sm font-medium hover:bg-slate-800 transition"
-                        >
-                          <Github size={14} />
-                          Code
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}
+                          className="flex items-center gap-2 bg-slate-900 text-white px-3 py-1.5 rounded-md text-sm font-medium hover:bg-slate-800 transition">
+                          <Github size={14} /> Code
                         </a>
                       )}
-
                       {project.report && (
-                        <a
-                          href={project.report}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-3 py-1.5 rounded-md text-sm font-medium hover:bg-blue-50 transition"
-                        >
-                          <ExternalLink size={14} />
-                          Full Report
+                        <a href={project.report} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}
+                          className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-3 py-1.5 rounded-md text-sm font-medium hover:bg-blue-50 transition">
+                          <ExternalLink size={14} /> Full Report
                         </a>
                       )}
-
                       {project.certificate && (
-                        <a
-                          href={project.certificate}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-3 py-1.5 rounded-md text-sm font-medium hover:bg-blue-50 transition"
-                        >
-                          <ExternalLink size={14} />
-                          Certificate
+                        <a href={project.certificate} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}
+                          className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 px-3 py-1.5 rounded-md text-sm font-medium hover:bg-blue-50 transition">
+                          <ExternalLink size={14} /> Certificate
                         </a>
                       )}
-
                       {project.demo && (
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="flex items-center gap-2 border-2 border-slate-300 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium hover:bg-slate-50 transition"
-                        >
-                          <ExternalLink size={14} />
-                          Demo
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}
+                          className="flex items-center gap-2 border-2 border-slate-300 text-slate-700 px-3 py-1.5 rounded-md text-sm font-medium hover:bg-slate-50 transition">
+                          <ExternalLink size={14} /> Demo
                         </a>
                       )}
                     </div>
-
                     <div className="flex items-center text-slate-700 text-sm font-medium">
                       Read more
                       <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
@@ -640,20 +550,15 @@ export default function AAIPortfolio() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-3">Technical Skills</h2>
-            <p className="text-gray-600 max-w-2xl">
-              A comprehensive toolkit for building end-to-end AI/ML solutions
-            </p>
+            <p className="text-gray-600 max-w-2xl">A comprehensive toolkit for building end-to-end AI/ML solutions</p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skillGroup, idx) => (
               <div key={idx} className="bg-white border border-gray-200 p-6 rounded-lg">
                 <h3 className="font-semibold text-gray-900 mb-3">{skillGroup.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {skillGroup.items.map((skill, i) => (
-                    <span key={i} className="bg-slate-100 text-slate-700 px-3 py-1 rounded-md text-sm">
-                      {skill}
-                    </span>
+                    <span key={i} className="bg-slate-100 text-slate-700 px-3 py-1 rounded-md text-sm">{skill}</span>
                   ))}
                 </div>
               </div>
@@ -662,47 +567,44 @@ export default function AAIPortfolio() {
         </div>
       </div>
 
-{/* About Section */}
-<div id="about" className="bg-slate-50 py-20">
-  <div className="max-w-6xl mx-auto px-6 lg:px-8">
-    <div className="max-w-3xl">
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">
-        Why SIT?
-      </h2>
-      <div className="space-y-4 text-gray-700 leading-relaxed">
-        <p>
-          My journey in AI has been shaped by diverse experiences that taught me discipline, 
-          innovation, and the importance of real world impact. As a member of the Temasek Polytechnic 
-          Tennis Team (2024/25 2025/26), I helped my team earn a Silver medal at the Tennis POL ITE 
-          tournament. More notably, in 2025/26, the TP men's tennis team achieved their first gold medal 
-          in 15 years a historic milestone that demonstrated what dedication and teamwork can accomplish. 
-          These experiences on the court taught me discipline, teamwork, and perseverance, qualities that 
-          translate directly to solving complex technical challenges.
-        </p>
-        <p>
-          SIT stands out to me because it emphasizes practical, industry integrated 
-          learning. The curriculum's focus on real world projects, industry partnerships, and applied research 
-          aligns perfectly with my hands on approach to learning. I'm drawn to SIT's Integrated Work Study 
-          Programme, which will allow me to gain real-world experience in actual business environments and contribute 
-          to meaningful solutions.
-        </p>
-        <p>
-          My portfolio demonstrates that I don't just build projects for academic credit I create systems 
-          designed for real deployment, validated by actual stakeholders like the SAFRA Tampines Club Manager. 
-          I want to continue this trajectory at SIT, collaborating with faculty and industry partners to develop 
-          solutions that address genuine business challenges. Whether it's improving healthcare diagnostics, 
-          enhancing manufacturing efficiency, or creating more accessible technology, I'm committed to using my skills 
-          as a force for positive change.
-        </p>
-        <p>
-          SIT represents the next step in my journey a place where my technical skills, 
-          competitive drive, and commitment to meaningful innovation can converge to create real impact.
-        </p>
+      {/* About Section */}
+      <div id="about" className="bg-slate-50 py-20">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why SIT?</h2>
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                My journey in AI has been shaped by diverse experiences that taught me discipline,
+                innovation, and the importance of real world impact. As a member of the Temasek Polytechnic
+                Tennis Team (2024/25 - 2025/26), my team earned a Silver medal at the Tennis POL-ITE
+                tournament in 2024/25. More notably, in 2025/26, the TP men's tennis team achieved their
+                first Gold medal in 15 years — a historic milestone that demonstrated what dedication and
+                teamwork can accomplish. These experiences on the court taught me discipline, teamwork, and
+                perseverance, qualities that translate directly to solving complex technical challenges.
+              </p>
+              <p>
+                SIT stands out to me because it emphasizes practical, industry integrated
+                learning. The curriculum's focus on real world projects, industry partnerships, and applied research
+                aligns perfectly with my hands on approach to learning. I'm drawn to SIT's Integrated Work Study
+                Programme, which will allow me to gain real-world experience in actual business environments and contribute
+                to meaningful solutions.
+              </p>
+              <p>
+                My portfolio demonstrates that I don't just build projects for academic credit — I create systems
+                designed for real deployment, validated by actual stakeholders like the SAFRA Tampines Club Manager.
+                I want to continue this trajectory at SIT, collaborating with faculty and industry partners to develop
+                solutions that address genuine business challenges. Whether it's improving healthcare diagnostics,
+                enhancing manufacturing efficiency, or creating more accessible technology, I'm committed to using my skills
+                as a force for positive change.
+              </p>
+              <p>
+                SIT represents the next step in my journey — a place where my technical skills,
+                competitive drive, and commitment to meaningful innovation can converge to create real impact.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
 
       {/* Contact Section */}
       <div id="contact" className="py-20">
@@ -710,30 +612,20 @@ export default function AAIPortfolio() {
           <div className="bg-slate-900 rounded-2xl p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Let's Connect</h2>
             <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-              Interested in discussing more? 
-              I'd love to hear from you.
+              Interested in discussing more? I'd love to hear from you.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <a
-                href="mailto:contactjoeltan@gmail.com"
-                className="flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-medium hover:bg-slate-100 transition"
-              >
-                <Mail size={18} />
-                Email Me
+              <a href="mailto:contactjoeltan@gmail.com"
+                className="flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-medium hover:bg-slate-100 transition">
+                <Mail size={18} /> Email Me
               </a>
-              <a
-                href="https://www.linkedin.com/in/joel-tan1245"
-                className="flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-700 transition"
-              >
-                <Linkedin size={18} />
-                LinkedIn
+              <a href="https://www.linkedin.com/in/joel-tan1245"
+                className="flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-700 transition">
+                <Linkedin size={18} /> LinkedIn
               </a>
-              <a
-                href="https://github.com/joel22222"
-                className="flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-700 transition"
-              >
-                <Github size={18} />
-                GitHub
+              <a href="https://github.com/joel22222"
+                className="flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-700 transition">
+                <Github size={18} /> GitHub
               </a>
             </div>
           </div>
